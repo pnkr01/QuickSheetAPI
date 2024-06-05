@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import urllib.request
+import requests
 import os,fitz, re
 import numpy as np
 import tensorflow_hub as hub
@@ -40,7 +41,7 @@ book_links = {
 
 recommender = None
 API_URL = "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct"
-headers = {"Authorization": "Bearer hf_QSowzMmBlhGeEjVbgXXa"}
+headers = {"Authorization": "Bearer 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"}
 
 
 def text_to_chunks(texts, word_length=150, start_page=1):
